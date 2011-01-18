@@ -58,7 +58,7 @@ class HumanityForm(forms.Form):
         
     def clean(self):
         
-        q = self.cleaned_data['humanity_question']
+        q = self.cleaned_data.get('humanity_question', '')
         a = self.cleaned_data.get('humanity_answer', '')
         
         if not is_correct_answer(q, a):

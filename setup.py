@@ -6,7 +6,7 @@ setup(
     py_modules=["humanity"],
     description="Form for math-based human verification",
     author="Jeremy Carbaugh",
-    author_email = "jcarbaugh@gmail.com",
+    author_email="jcarbaugh@gmail.com",
     license='BSD',
     platforms=["any"],
     classifiers=[
