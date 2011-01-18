@@ -31,7 +31,7 @@ class HumanityQuestionField(forms.Field):
         super(HumanityQuestionField, self).__init__(*args, **kwargs)
     
     def clean(self, value):
-        value = base64.b64decode(value)
+        value = base64.b64decode(value or '')
         return super(HumanityQuestionField, self).clean(value)
 
 class HumanityForm(forms.Form):
