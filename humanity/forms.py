@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django import forms
+from django.conf import settings
 import base64
 import random
 
@@ -62,4 +63,4 @@ class HumanityForm(forms.Form):
         a = self.cleaned_data.get('humanity_answer', '')
         
         if not is_correct_answer(q, a):
-            raise ValidationError("You are a robot!")
+            raise ValidationError(getattr(settings, "HUMANITY_ERROR_MESSAGE", "You are a robot!"))
