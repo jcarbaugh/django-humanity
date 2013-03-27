@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name="django-humanity",
-    version='0.1',
+    version='0.2',
     py_modules=["humanity"],
     description="Form for math-based human verification",
     author="Jeremy Carbaugh",
